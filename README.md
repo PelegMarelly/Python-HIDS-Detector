@@ -41,7 +41,7 @@ The detection script requires access to the network interface, which mandates ad
 1.  Open a terminal or command prompt as **Administrator** (or use `sudo` on Linux).
 2.  Execute the detector script:
     ```bash
-    python scan_detector.py
+    sudo python3 scan_detector.py
     ```
 3.  The system will initialize and begin monitoring network traffic.
 
@@ -54,7 +54,7 @@ The repository includes an `attacker.py` script designed to simulate a compromis
     > **Technical Note:** We use an external IP to force traffic through the physical Network Interface Card (NIC), allowing the sniffer to capture outbound packets. Using `localhost` might cause the OS to route traffic via the Loopback interface, bypassing the sniffer.
 3.  Run the attack simulation:
     ```bash
-    python attacker.py
+    sudo python3 attacker.py
     ```
 4.  **Select an Attack Vector:** The script will present a menu. Choose an option (1-4) to simulate different scan types (SYN, XMAS, NULL, or ARP).
 
